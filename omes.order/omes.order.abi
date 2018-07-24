@@ -1,0 +1,76 @@
+{
+  "types": [{
+      "new_type_name": "account_name",
+      "type": "name"
+  }],
+  "structs": [{
+      "name": "create",
+      "base": "",
+      "fields": [
+        {"name": "user", "type": "account_name"},
+        {"name": "order_id", "type": "uint64"},
+        {"name": "items", "type": "item[]"},
+        {"name": "total", "type": "asset"},
+        {"name":"memo", "type":"string"}
+      ]
+    },
+    {
+      "name": "orders",
+      "base": "",
+      "fields": [
+        {"name":"order_id", "type":"uint64"},
+        {"name": "items", "type": "item[]"},
+        {"name": "total", "type": "asset"},
+        {"name":"memo", "type":"string"}
+      ]
+    },
+    {
+      "name": "item",
+      "base": "",
+      "fields": [
+        {"name":"sku", "type":"uint64"},
+        {"name":"sub_total", "type":"asset"}
+      ]
+    },
+    {
+      "name": "hello",
+      "base": "",
+      "fields": [
+        {"name":"user", "type":"account_name"},
+        {"name":"memo", "type":"string"}
+      ]
+    }
+  ],
+  "actions": [{
+      "name": "create",
+      "type": "create",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "hello",
+      "type": "hello",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "delay",
+      "type": "hello",
+      "ricardian_contract": ""
+    }
+  ],
+  "tables": [{
+      "name": "orders",
+      "type": "orders",
+      "index_type": "i64",
+      "key_names" : ["order_id"],
+      "key_types" : ["uint64"]
+    },
+    {
+      "name": "greeting",
+      "type": "hello",
+      "index_type": "i64",
+      "key_names" : ["user"],
+      "key_types" : ["account_name"]
+    }
+  ],
+  "ricardian_clauses": []
+}

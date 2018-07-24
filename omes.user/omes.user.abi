@@ -1,0 +1,35 @@
+{
+  "types": [{
+      "new_type_name": "account_name",
+      "type": "name"
+  }],
+  "structs": [{
+      "name": "reguser",
+      "base": "",
+      "fields": [
+        {"name": "user", "type": "account_name"}
+      ]
+    },
+    {
+      "name": "signin",
+      "base": "",
+      "fields": [
+        {"name": "user", "type": "account_name"}
+      ]
+    }
+  ],
+  "actions": [{
+      "name": "reguser",
+      "type": "reguser",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "signin",
+      "type": "signin",
+      "ricardian_contract": ""
+    }
+  ],
+  "tables": [
+  ],
+  "ricardian_clauses": []
+}
