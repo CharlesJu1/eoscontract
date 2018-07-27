@@ -1,0 +1,57 @@
+{
+  "types": [{
+      "new_type_name": "account_name",
+      "type": "name"
+  }],
+  "structs": [{
+      "name": "groupbuy",
+      "base": "",
+      "fields": [
+        {"name": "gbid", "type": "uint64"},
+        {"name": "sku", "type": "uint64"},
+        {"name": "price", "type": "asset"},
+        {"name": "memo", "type": "string"},
+        {"name": "grp_size", "type": "uint64"},
+        {"name": "members", "type": "account_name[]"},
+        {"name": "status", "type": "uint8"},
+      ]
+    },
+    { "name": "create",
+      "base": "",
+      "fields": [
+        {"name": "gbid", "type": "uint64"},
+        {"name": "sku", "type": "uint64"},
+        {"name": "price", "type": "asset"},
+        {"name": "memo", "type": "string"},
+        {"name": "grp_size", "type": "uint64"}
+      ]
+    },
+    { "name": "join",
+      "base": "",
+      "fields": [
+        {"name": "gbid", "type": "uint64"},
+        {"name": "user", "type": "account_name"}
+      ]
+    }
+  ],
+  "actions": [{
+      "name": "create",
+      "type": "create",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "join",
+      "type": "join",
+      "ricardian_contract": ""
+    }
+  ],
+  "tables": [{
+      "name": "groupbuys",
+      "type": "groupbuy",
+      "index_type": "i64",
+      "key_names" : ["gbid"],
+      "key_types" : ["uint64"]
+    }
+  ],
+  "ricardian_clauses": []
+}

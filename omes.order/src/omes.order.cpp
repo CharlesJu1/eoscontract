@@ -71,7 +71,7 @@ namespace omes {
             });
         }
         else {
-            print ("order not found");
+            print ("order xnot found");
             //first parameter of emplace is the payer
             gt.emplace( _self, [&]( auto& g ) {
                g.user = user;

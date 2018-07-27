@@ -62,6 +62,5 @@ cleos get table omes.product omes.product products
 ##### omes.groupbuy contract #############
 cleos create account eosio omes.grpbuy EOS73D1s3ie2M8WdSDefQp4ZCYX99sda9wmkVvJ3GBLUbNyBeXnTe EOS5pJ1hEb6YhNVwE6EsJWYk88fYwYnEzYGEMwbwsZeGZx1XvT1u6
 cleos set contract omes.grpbuy ~/omes-contract/omes.groupbuy -p omes.grpbuy
-#cleos push action omes.grpbuy create '["1", "1234", "20 CNY", "bbaaa", "3"]' -p omes.grpbuy
-#cleos push action omes.grpbuy join '["1", "user1"]' -p omes.grpbuy
+#cleos push action omes.grpby create '["1", "1234", "20 CNY", "bbaaa"]' -p omes.grpbuy
 cleos get table omes.grpbuy omes.grpbuy groupbuys
